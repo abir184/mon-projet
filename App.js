@@ -1,6 +1,6 @@
-```jsx
+
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ProductScreen from './src/screens/ProductScreen';
 
 export default function App() {
@@ -18,4 +18,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
 });
-```

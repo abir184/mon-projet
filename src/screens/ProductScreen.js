@@ -1,22 +1,34 @@
-```jsx
+
 import React from 'react';
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+} from 'react-native';
 import products from '../data/products';
 
 export default function ProductScreen() {
   return (
     <ScrollView style={styles.container}>
-      {products.map((item) => (
-        <View key={item.id} style={styles.product}>
-          <Image
-            source={{ uri: item.image }}
-            style={styles.image}
-          />
-          <Text style={styles.name}>{item.name}</Text>
-          <Text style={styles.price}>{item.price} DT</Text>
-          <Text>{item.description}</Text>
-        </View>
-      ))}
+      <View style={styles.grid}>
+        {products.map((item) => (
+          <View key={item.id} style={styles.product}>
+            <Image
+              source={{ uri: item.image }}
+              style={styles.image}
+              resizeMode="contain"
+            />
+
+            <Text style={styles.name}>{item.name}</Text>
+
+            <Text style={styles.price}>
+              {item.price} DT
+            </Text>
+          </View>
+        ))}
+      </View>
     </ScrollView>
   );
 }
@@ -27,22 +39,30 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 35,
   },
+  grid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
+  },
   product: {
-    padding: 15,
+    width: '48%',
+    marginBottom: 15,
+    padding: 5,
   },
   image: {
     width: '100%',
     aspectRatio: 1,
+    backgroundColor: '#f5f5f5',
   },
   name: {
-    fontSize: 20,
+    fontSize: 16,
     fontWeight: 'bold',
-    marginTop: 10,
+    marginTop: 8,
   },
   price: {
-    fontSize: 16,
+    fontSize: 15,
     color: 'green',
-    marginVertical: 5,
+    marginTop: 4,
   },
 });
-```
