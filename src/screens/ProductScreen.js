@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import products from '../data/products';
 
- function ProductScreen() {
+ const ProductScreen() => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.grid}>
