@@ -57,10 +57,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 8,
   },
-  price: {
-    fontSize: 15,
-    color: 'green',
-    marginTop: 4,
-  },
 });
 export default ProductScreen;
