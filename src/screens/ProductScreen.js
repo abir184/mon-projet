@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import products from '../data/products';
 
-export default function ProductScreen() {
+ function ProductScreen() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.grid}>
@@ -23,9 +23,6 @@ export default function ProductScreen() {
 
             <Text style={styles.name}>{item.name}</Text>
 
-            <Text style={styles.price}>
-              {item.price} DT
-            </Text>
           </View>
         ))}
       </View>
@@ -66,3 +63,4 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+export default ProductScreen;
